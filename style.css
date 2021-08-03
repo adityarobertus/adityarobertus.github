@@ -1,0 +1,10 @@
+.jumbotron {
+  padding-top: 5rem;
+  background-color: #d1e5e6;
+}
+#projects {
+  background-color: #d1e5e6;
+}
+html {
+  scroll-padding-top: 6rem;
+}
