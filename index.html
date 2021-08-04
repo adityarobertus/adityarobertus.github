@@ -288,9 +288,19 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/TextPlugin.min.js"></script>
+    <script src="gsap-member/minified/CustomEase.min.js"></script>
     <script>
       gsap.registerPlugin(TextPlugin);
-      gsap.from('.jumbotron img', { duration: 2, opacity: 0, y: '-100%', ease: 'bounce' });
+      //gsap.from('.jumbotron img', { duration: 2, opacity: 0, y: '-100%', ease: 'bounce' });
+      gsap.from('.jumbotron img', {
+        duration: 2.5,
+        scale: 0.5,
+        ease: CustomEase.create(
+          'custom',
+          'M0,0 C0.14,0 0.242,0.438 0.272,0.561 0.313,0.728 0.354,0.823 0.362,0.86 0.37,0.845 0.403,0.678 0.444,0.616 0.499,0.531 0.553,0.573 0.566,0.582 0.642,0.632 0.719,0.867 0.726,0.884 0.788,0.8 0.813,0.831 0.83,0.848 0.858,0.876 0.872,0.963 0.886,0.976 0.897,0.972 0.91,0.918 0.938,0.918 0.976,0.918 1,1 1,1 '
+        ),
+        y: '-100%',
+      });
       gsap.to('.lead', { duration: 2.5, text: 'Electrical Eng. | Content Creator' });
     </script>
   </body>
