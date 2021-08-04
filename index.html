@@ -47,8 +47,8 @@
     <!-- Jumbotron -->
     <section class="jumbotron text-center">
       <img src="img/117538.jpg" alt="Robertus Aditya" width="200" class="rounded-circle img-thumbnail" />
-      <h1 class="display-4">Robertus Aditya</h1>
-      <p class="lead">Electrical Eng. | Content Creator</p>
+      <h1 class="display-4" data-aos="fade-left" data-aos-anchor="#example-anchor">Robertus Aditya</h1>
+      <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -98,7 +98,7 @@
         </div>
         <div class="row">
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="zoom-in-right">
               <img src="img/Acv 1.jpg" class="card-img-top" alt="Projects 1" />
               <div class="card-body">
                 <p class="card-text">Practical Work at PT INDONESIA POWER PGU SEMARANG</p>
@@ -106,7 +106,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="zoom-in-up" data-aos-delay="100">
               <img src="img/Acv 2.jpg" class="card-img-top" alt="Projects 2" />
               <div class="card-body">
                 <p class="card-text">Winner of Mixed Youth Category on Penabur International Choir Festival 2019</p>
@@ -115,7 +115,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="zoom-in-left" data-aos-delay="200">
               <img src="img/Acv 3.jpg" class="card-img-top" alt="Projects 3" />
               <div class="card-body">
                 <p class="card-text">IoT Project and Website Programming</p>
@@ -125,7 +125,7 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="zoom-in-up">
               <img src="img/Acv 4.png" class="card-img-top" alt="Projects 4" />
               <div class="card-body">
                 <p class="card-text">T-Shirt Design</p>
@@ -133,7 +133,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="zoom-in-up">
               <img src="img/Acv 5.png" class="card-img-top" alt="Projects 5" />
               <div class="card-body">
                 <p class="card-text">Logo Design</p>
@@ -285,6 +285,13 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/TextPlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.from('.jumbotron img', { duration: 2, opacity: 0, y: '-100%', ease: 'bounce' });
+      gsap.to('.lead', { duration: 2.5, text: 'Electrical Eng. | Content Creator' });
     </script>
   </body>
 </html>
