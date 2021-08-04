@@ -236,27 +236,27 @@
       const form = document.forms['submit-to-google-sheet'];
       const btnSend = document.querySelector('.btn-send');
       const btnLoading = document.querySelector('.btn-loading');
-      const successAlert = document.querySelector('.succes-alert');
+      const successAlert = document.querySelector('.success-alert');
       const failedAlert = document.querySelector('.failed-alert');
 
       form.addEventListener('submit', (e) => {
         e.preventDefault();
         //ketika tombol submit di klik
         //tampilkan tombol loading
-        btnLoading.classList.toogle('d-none');
-        btnSend.classList.toogle('d-none');
+        btnLoading.classList.toggle('d-none');
+        btnSend.classList.toggle('d-none');
         fetch(scriptURL, { method: 'POST', body: new FormData(form) })
           .then((response) => {
             //tampilkan tombol kirim
-            btnLoading.classList.toogle('d-none');
-            btnSend.classList.toogle('d-none');
+            btnLoading.classList.toggle('d-none');
+            btnSend.classList.toggle('d-none');
             //tampilkan alert sukses
-            succesAlert.classList.toogle('d-none');
+            successAlert.classList.toggle('d-none');
             form.reset();
             console.log('Success!', response);
           })
           .catch((error) => {
-            failedAlert.classList.toogle('d-none');
+            failedAlert.classList.toggle('d-none');
             console.error('Error!', error.message);
           });
       });
