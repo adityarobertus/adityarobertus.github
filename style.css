@@ -30,6 +30,10 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin-left: 60px;
 }
+#education {
+  background-color: #e6e6e6;
+  background-size: auto;
+}
 #projects {
   /* background-color: #d1e5e6; */
   background-color: #e6e6e6;
@@ -65,10 +69,85 @@ html {
   background-color: rgba(95, 238, 0, 0.849);
   border-radius: 30px;
 }
+.box4 {
+  position: relative;
+  z-index: 1;
+  width: 400px;
+  height: 400px;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  background-color: #e6e6e6;
+  border-radius: 100%;
+}
+.text-education {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: inherit;
+  margin-top: 50px;
+}
+.education figure img {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  top: -50px;
+  left: 50px;
+  clip-path: inset(0, 0, 20px, 0);
+}
+/* .info-panel { */
+/* background-color: salmon; */
+/* border-radius: 10px; */
+
+.tk-krisma,
+.sd-krisma,
+.smp-bl,
+.sma-4ska,
+.undip {
+  position: relative;
+  margin-left: 100px;
+  font-weight: 200;
+}
+.footer {
+  background-color: white;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+}
 /* Versi Mobile */
-@media (min-width: 375px) {
+@media (min-width: 320px) {
   .navbar-brand {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-left: 100px;
+  }
+}
+
+@media (max-width: 576px) {
+  .info-panel {
+    position: relative;
+    left: 60px;
+  }
+  .box4 {
+    width: auto;
+    height: auto;
+    position: relative;
+    left: -60px;
+  }
+  .tk-krisma,
+  .sd-krisma,
+  .smp-bl,
+  .sma-4ska,
+  .undip {
+    margin-left: 25px;
+  }
+  .education figure img {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    top: -50px;
+    left: -20px;
   }
 }
